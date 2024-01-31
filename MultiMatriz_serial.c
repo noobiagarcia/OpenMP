@@ -4,7 +4,6 @@
 #include <math.h>
 
 #define N 10000
-
 void imprimir(int size, double **Matriz)
 {
    printf("\n");
@@ -13,13 +12,10 @@ void imprimir(int size, double **Matriz)
     for(i=0;i<size;i++)
     {
         for(j=0;j<size;j++)
-        {
-            printf("%.2f\t", Matriz[i][j]);
-        }
+        	printf("%.2f\t", Matriz[i][j]);
         printf("\n");
     }
 }
-
 void multimatriz(int size, double **MatrizA, double **MatrizB, double **MatrizC)
 {
 	int i, j, k;
@@ -30,12 +26,9 @@ void multimatriz(int size, double **MatrizA, double **MatrizB, double **MatrizC)
 		for(j=0;j<size;j++)
 		{
 			soma=0;
-
 			for(k=0;k<size;k++)
-			{
 				soma += MatrizA[i][k]*MatrizB[k][j];
-			}
-
+	
 			MatrizC[i][j] = soma;
 			soma=0;
 		}
@@ -44,9 +37,7 @@ void multimatriz(int size, double **MatrizA, double **MatrizB, double **MatrizC)
 	/*printf("Matriz C\n");
    imprimir(N, MatrizC);
    printf("\n");*/
-
 }
-
 int main()
 {
 	int i, j, k;
@@ -70,8 +61,7 @@ int main()
         {
             MatrizA[i][j] = (double) rand()/RAND_MAX;
        		MatrizB[i][j] = (double) rand()/RAND_MAX;
-			}
-
+		}
     }
 
 	/*printf("Matriz A\n");
