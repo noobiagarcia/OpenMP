@@ -70,5 +70,5 @@ int main()
     printf("Aplicando o Método\n");
     gauss(NLIN, NCOL, MatrizA);
 
-return(0)	
+return 0;	
 }
