@@ -1,11 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
 #include<math.h>
 
 #define NLIN 3200
 #define NCOL 3200
-
 /*void imprimir(int linha, int coluna, double MatrizA[linha][coluna])
 {
 	printf("\n");
@@ -43,19 +41,15 @@ void gauss(int l, int c, double MatrizA[l][c])
     {
 		soma=0;
 		for(j=i+1; j<c-1; j++)
-		{
-		     soma = soma + (MatrizA[i][j]*x[j]); //somando os termos isolados do lado direito das incógnitas.
-		}
+			soma = soma + (MatrizA[i][j]*x[j]); //somando os termos isolados do lado direito das incógnitas.
+		
 		x[i]=(MatrizA[i][c-1]-soma)/MatrizA[i][i]; //Aplicando a formula do método.
-
 	    //imprimir(NLIN, NCOL, MatrizA);
 	}
 
 	printf("\nA Matriz Final é: ");
 	 for(i=0; i<l; i++)
-    {
-        printf("\nx[%d] = %.5f\n", i+1, x[i]); //Printando os resultados dos x[i]
-    }
+    	printf("\nx[%d] = %.5f\n", i+1, x[i]); //Printando os resultados dos x[i]
 }
 int main()
 {
@@ -66,13 +60,9 @@ int main()
 	 for(i=0; i<NLIN; i++)
     {
         for(j=0; j<NCOL; j++)
-        {
-            MatrizA[i][j] = (double) rand();
-        }
-
+        	MatrizA[i][j] = (double) rand();
     }
-
-
+	
 	/*printf("Matriz Inicial\n");
     imprimir(NLIN, NCOL, MatrizA);
 	printf("\n"); */
@@ -80,5 +70,5 @@ int main()
     printf("Aplicando o Método\n");
     gauss(NLIN, NCOL, MatrizA);
 
+return(0)	
 }
-
